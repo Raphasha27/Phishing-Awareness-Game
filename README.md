@@ -27,6 +27,20 @@ Educational gamification platform that trains users to identify phishing attempt
 - **Training Mode** — Educational explanations for each scenario
 - **Reporting** — PDF/CSV export for compliance tracking
 
+
+## Architecture
+
+```mermaid
+graph LR
+    USER[User] --> API[FastAPI]
+    API --> PROC[Processor]
+    PROC --> DB[(Database)]
+    API --> AUTH[Auth Layer]
+    PROC --> AI[AI/ML Engine]
+```
+
+Microservices-based architecture with API Gateway, authentication layer, PostgreSQL persistence, and event-driven communication.
+
 ## Quick Start
 
 ```bash
